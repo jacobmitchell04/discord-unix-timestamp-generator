@@ -1,12 +1,11 @@
 {
-  "name": "untitled",
+  "name": "discord-unix-timestamp-generator",
+  "description": "A simple easy to use timestamp generator for Discord.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.24",
     "@types/node": "^12.20.20",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
@@ -14,7 +13,8 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.5",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "bulma": "^0.9.3"
   },
   "scripts": {
     "start": "react-scripts start",
