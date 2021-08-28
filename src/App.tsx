@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bulma/css/bulma.min.css'
 import './App.css';
+import dayjs from 'dayjs';
 
 interface TimestampFormat {
     style: string;
@@ -53,10 +54,10 @@ function App() {
     const [time, setTime] = useState('');
     const [format, setFormat] = useState(TIMESTAMP_FORMAT.find((format: TimestampFormat) => format.default)?.style || '');
 
+
     const generateTimestamp = (): number | null => {
         if (!date) return null;
-        const timestamp = new Date(date + ' ' + time);
-        return timestamp.valueOf() / 1000;
+        return dayjs(date + ' ' + time).unix();
     }
 
     const generateFormat = (): string | null => {
@@ -139,6 +140,7 @@ function App() {
                             <h5 className="title is-5">
                                 Formatted Message
                             </h5>
+
                             <pre>
                                 {generateFormat() || 'No format'}
                             </pre>
